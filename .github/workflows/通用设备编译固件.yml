@@ -125,6 +125,9 @@ jobs:
           make download -j8
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
+    
+      - name: Setup Debug Session
+        uses: csexton/debugger-action@master
 
       - name: Compile the OpenWrt
         id: compile
